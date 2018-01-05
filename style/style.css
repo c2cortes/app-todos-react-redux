@@ -1,0 +1,82 @@
+.search-bar{
+	margin: 20px;
+	text-align: center;
+}
+
+.search-bar input{
+	width: 75%;
+}
+
+.video-item img{
+	max-width: 64px;
+}
+
+.video-details .details{
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.list-group-item {
+	cursor: pointer;
+}
+
+.list-group-item:hover{
+	background-color: #eee;
+}
+
+.cont-login-form{
+	width: 50%;
+	margin: auto;
+	margin-top: 150px;
+}
+
+.cont-login-form h4{
+	text-align: center;
+}
+
+.cont-login-form form .input-group-btn button{
+	float: right;
+}
+
+.cont-todos-items{
+	float: left;
+	width: 50%;
+}
+
+.cont-todos-items h3{
+	text-align: center;
+}
+
+.card.border-dark.mb-3{
+    margin-left: 15px;
+}
+
+.card-body.text-dark {
+    padding: 10px;
+}
+
+.main-container header h1{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.cont-new-item-button button.btn.btn-secondary{
+	margin: auto;
+}
+
+.trash-button{
+	float: right;
+	margin-top: -27px;
+	margin-right: -10px;
+}
+
+
+
+
+
+
+
+
