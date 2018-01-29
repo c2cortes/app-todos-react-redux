@@ -18,9 +18,12 @@ ReactDOM.render(
     <BrowserRouter>
     	<div>
     		<Switch>
+
           <Route path="/projects" component={ProjectsList}/>
           <Route path="/todos/:project_id" component={TodosList}/>
-          <Route path="/" component={ProjectsList}/>
+          <Route path="/login/:status" component={LoginView}/>
+          <Route path="/" component={LoginView}/>
+
 		    </Switch>
     	</div>
     </BrowserRouter>

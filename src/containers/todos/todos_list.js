@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -20,7 +19,8 @@ class TodosList extends Component {
 	}
 
 	componentWillMount(){
-		this.props.fetchTodos(this.props.match.params.project_id);
+		if(localStorage.getItem('googleId') == null) window.location.href = '/login';
+		else this.props.fetchTodos(this.props.match.params.project_id);
 	}
 
 	componentWillReceiveProps(nextProps){
@@ -43,6 +43,7 @@ class TodosList extends Component {
 
 		return(
 			<div className="main-container">
+				<a href="/login/0"> {'Logout ' + localStorage.getItem('userName')} </a>
 				<header> <h1>Tracking Time App</h1> </header>
 				<h2>Tasks</h2>
 				<Link to={'/projects'}>Go to projects</Link>

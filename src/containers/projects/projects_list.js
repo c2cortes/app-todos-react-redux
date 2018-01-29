@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { GoogleLogout } from 'react-google-login';
 import { connect } from 'react-redux';
-
+import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { fetchProjects } from '../../actions/index';
 
@@ -25,7 +26,8 @@ class ProjectsList extends Component {
 	}
 
 	componentWillMount(){
-		this.props.fetchProjects();
+		if(localStorage.getItem('googleId') == null) window.location.href = '/login';
+		else this.props.fetchProjects();
 	}
 
 	componentWillReceiveProps(nextProps){
@@ -41,13 +43,14 @@ class ProjectsList extends Component {
 	}
 
 	render(){
-
+		
 		if(this.props.projects == null){
 			return(<div>Loading...</div>)
 		}
 
 		return(
 			<div className="main-container">
+				<a href="/login/0"> {'Logout ' + localStorage.getItem('userName')} </a>
 				<header> <h1>Tracking Time App</h1> </header>
 				<h2>Projects</h2>
 				<ProjectFormComponent />

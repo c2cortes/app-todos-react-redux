@@ -75,25 +75,11 @@ export function updateTodo(sessionId, params){
 	}
 }
 
-export function deleteTodo(sessionId, params){
-	const url = `${API_URL}todo?sessionId=${sessionId}`;
-	const request = axios.delete(url, params);
-
-	return{
-		type: DELETE_TODO,
-		payload: 'nothing'
-	}
-}
-
-
 ////////***  Auth Actions  ***/////////
 
-export function authAction(username, password){
-	const url = `${API_URL}user/auth`;
-	const request = axios.post(url, { username: username, password: password })
-
+export function authAction(params){
 	return{
 		type: AUTH,
-		payload: request
+		payload: params
 	}
 }
