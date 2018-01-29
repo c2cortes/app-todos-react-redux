@@ -63,8 +63,14 @@
 	margin-bottom: 15px;
 }
 
+.main-container h2{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
 .cont-new-item-button button.btn.btn-secondary{
-	margin: auto;
+	/*margin: auto;*/
 }
 
 .trash-button{
@@ -73,6 +79,26 @@
 	margin-right: -10px;
 }
 
+.content-todo-form-input {
+	height: 40px;
+}
+
+.content-todo-form-input input{
+	width: 86%;
+	float: left;
+	border-radius: 5px 0px 0px 5px;
+}
+
+.content-todo-form-input button{
+	float: left;
+	border-radius: 0px 5px 5px 0px;
+}
+
+.cont-inputs-todo-form input{
+	float: left;
+	width: 30%;
+	margin-left: 12px;
+}
 
 
 

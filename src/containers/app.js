@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import LoginView from './login_view';
-import TodosContainer from './todos_container';
+import LoginView from './auth/login_view';
 
 class App extends Component{
 
@@ -16,22 +15,10 @@ class App extends Component{
 		}
 	}
 
-	shouldComponentUpdate(nextProps, nextState){
-		if(nextProps != nextState){
-			console.log('changed')
-			if(nextProps.authState.data.status == 'success'){
-				this.setState({contentSection: <TodosContainer sessionId={this.state.sessionId}/>});
-			}
-
-			return true;
-		}
-	}
-
 	render(){
 		return(
 			<div>
 				<div>
-					<TodosContainer sessionId={this.state.sessionId}/>
 				</div>
 			</div>
 		)

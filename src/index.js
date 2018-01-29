@@ -5,8 +5,9 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import LoginView from './containers/login_view';
-import TodosContainer from './containers/todos_container';
+import LoginView from './containers/auth/login_view';
+import TodosList from './containers/todos/todos_list';
+import ProjectsList from './containers/projects/projects_list.js';
 
 import reducers from './reducers';
 
@@ -17,9 +18,9 @@ ReactDOM.render(
     <BrowserRouter>
     	<div>
     		<Switch>
-		    	<Route path="/login" component={LoginView}/>
-		    	<Route path="/todos" component={TodosContainer}/>
-          <Route path="/" component={LoginView}/>
+          <Route path="/projects" component={ProjectsList}/>
+          <Route path="/todos/:project_id" component={TodosList}/>
+          <Route path="/" component={ProjectsList}/>
 		    </Switch>
     	</div>
     </BrowserRouter>
